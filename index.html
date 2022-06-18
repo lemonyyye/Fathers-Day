@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'lemon';
+            /* src: url('迷你简海韵.TTF'); */
+            /* src: url('汉仪雪峰体简.TTF'); */
+            src: url('STXINGKA.TTF');
+        }
+        .box{
+            width:500px;
+            height: 100vh;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background: url('imgs/bg.jpg') no-repeat;
+            background-size: cover;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        img{
+            width: 100%;
+            transform: translate(0, 200px) scale(1.5);
+            animation: move 3s linear 1 forwards;
+            transition: all 3s;
+        }
+        .text{
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            padding-top: 50px;
+            overflow: hidden;
+            animation: textShow 5s linear 0s 1 forwards;
+        }
+        .text p{
+            margin: 20px 0;
+        }
+        .text p:first-child{
+            font-size: 20px;
+        }
+        .text p:last-child{
+            font-weight: bold;
+            font-size: 40px;
+            font-family:'lemon';
+        }
+        /* .box:hover img{
+            transform: translate(0, 200px) scale(0.8);
+        } */
+        @keyframes move {
+            0%{
+                transform: translate(0, 200px) scale(1.5);
+            }
+            100%{
+                transform: translate(0, 200px) scale(0.8);
+            }
+        }
+
+        @keyframes textShow {
+            0%{
+                opacity: 0;
+                /* width: 0; */
+                height: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                width: 100%;
+                height: 150px;
+                opacity: 1;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="text">
+            <p>如山的背景，无声的父爱</p>
+            <p>父亲的背景，渐行渐远。 <br>岁月的折磨，令他躬了背，白了发鬓，<br> 逐渐苟老，却仍高大、温暖。</p>
+            <p>爸爸，父亲节快乐</p>
+        </div>
+        <img src="imgs/father2.jpg" alt="">
+    </div>
+</body>
+</html>
